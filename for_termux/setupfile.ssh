@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Update and upgrade packages
+pkg update -y && pkg upgrade -y
+
+# Install essential packages
+pkg install -y git wget curl python vim
+
+# Install additional utilities
+pkg install -y htop termux-api
+
+# Set up Python environment
+pip install --upgrade pip
+pip install virtualenv
+
+# Clean up
+pkg clean
+
+echo "All essential packages and files have been installed."
